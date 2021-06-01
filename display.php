@@ -20,15 +20,18 @@ and open the template in the editor.
             </ul>
 
         </nav>
+        <ul class="display">
         <?php
         include('connection.php');
         $search = mysqli_real_escape_string($con, $_GET['search']);
-        $sql='';
-        if($search =='Movie'or $search =='Video game'){
+        $sql = '';
+        if ($search == '') {
+            $sql = "SELECT * FROM media";
+        } elseif ($search == 'Movie'or $search == 'Video game') {
             $sql = "SELECT * FROM media WHERE Type='$search'";
-        }elseif ($search =='Action'or $search =='Horror' or $search =='Comedy'or $search =='FPS' or $search =='RPG' or $search =='Sports Games') {
+        } elseif ($search == 'Action'or $search == 'Horror' or $search == 'Comedy'or $search == 'FPS' or $search == 'RPG' or $search == 'Sports Games') {
             $sql = "SELECT * FROM media WHERE Genre='$search'";
-        }else{
+        } else {
             $sql = "SELECT * FROM media WHERE Title='$search'";
         }
         $result = mysqli_query($con, $sql);
@@ -36,7 +39,7 @@ and open the template in the editor.
         if (mysqli_num_rows($result) > 0) {
             // output data of each row
             while ($row = mysqli_fetch_assoc($result)) {
-                echo "id: " . $row["Title"] . " - Name: " . $row["Type"] . " " . $row["Genre"] . "<br>";
+                echo "<li> " . $row["Title"] . "<li><img>" . $row["Type"] . " " . $row["Genre"] . "<br>";
             }
         } else {
             echo "0 results";
