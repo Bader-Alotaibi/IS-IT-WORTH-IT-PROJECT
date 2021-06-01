@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-around; /*to space the countent around*/
+    width: 100%;
+    position: relative;
+    background-color: #87091A;
+    text-align: center;
+    padding: 15px 30px;
+    
+    
+}
+
+nav .logo{
+    color: rgb(226, 226,226);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
+}
+nav .links{ 
+    display: flex; /* TO make them next to each other */
+    list-style: none; /*To remove dots*/
+    margin: auto 0;
+}
+nav .links li{
+    margin: 0 2px;
+}
+
+nav .links a{
+    color: rgb(226, 226,226);
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+nav .links li:hover a{
+    background: rgb(226, 226,226);
+    color: #87091A;
+}
+
+#frm{  
+    border: solid gray 1px;  
+    width:25%;  
+    border-radius: 2px;  
+    margin: 120px auto;  
+    background: white;  
+    padding: 50px;  
+}  
+#btn{  
+    color: #fff;  
+    background: #337ab7;  
+    padding: 7px;  
+    margin-left: 70%;  
+} 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Is It Worth It</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='Style.css'>
+    </head>
+    <body>
+        <nav>
+            <div class='logo'>Is It Worth It</div>
+            <ul class='links'>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+
+        </nav>
+        <br><br>
+        <h1>Welcome to Is It Worth IT</h1>
+        <br>
+        <form action="display.php" method="GET">
+                <input id="search" type="text" placeholder="Search here" name="search">
+                <input id="submit" type="submit" value="Search">
+                </form>
+        <br>
+        <h4>Get started by choosing from the option we offer.</h4>
+        <form action="/action_page.php">
+  <label for="media">Choose:</label>
+  <select name="media" id="media">
+      <option value="Movie">Movies</option>
+    <option value="Action">Action Movies</option>
+    <option value="Horror">Horror Movies</option>
+    <option value="Comedy">Comedy Movies</option>
+    <option value="Video game">Video games</option>
+    <option value="RPG">RPG Video games</option>
+    <option value="Sports Games">Sports Video games</option>
+    <option value="FPS">FPS Video games</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+    </body>
+</html>

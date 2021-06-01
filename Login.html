@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='Style.css'>
+    </head>
+    <body>
+        <nav>
+            <div class='logo'>Is It Worth It</div>
+            <ul class='links'>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+
+        </nav><br>
+        <div id = "frm">  
+            <h2>Login</h2><br>  
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label> User Name: </label>  
+                <input type = "text" id ="user" name  = "user" />  
+            </p><br>  
+            <p>  
+                <label> Password: </label>  
+                <input type = "password" id ="pass" name  = "pass" />  
+            </p><br>  
+            <p>     
+                <input type =  "submit" id = "btn" value = "Login" />
+                Don't have an account? <a href="Register.html">Register</a><br> 
+            </p>  
+        </form>  
+    </div>  
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>
+    </body>
+</html>
