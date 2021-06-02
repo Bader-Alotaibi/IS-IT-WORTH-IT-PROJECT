@@ -58,4 +58,8 @@ nav .links li:hover a{
     background: #337ab7;  
     padding: 7px;  
     margin-left: 70%;  
-} 
+}
+img{
+    max-width: 100%;
+    height: auto;
+}

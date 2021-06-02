@@ -38,9 +38,17 @@ and open the template in the editor.
 
         if (mysqli_num_rows($result) > 0) {
             // output data of each row
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo "<li> " . $row["Title"] . "<li><img>" . $row["Type"] . " " . $row["Genre"] . "<br>";
+            while ($row = mysqli_fetch_assoc($result)) {?>
+            <li><h2> <?php echo $row["Title"]; ?></h2></li>
+            <li>Type: <?php echo $row["Type"]; ?>  Genre: <?php echo $row["Genre"]; ?></li>
+            <li><img src="Posters/<?php echo $row["Title"]; ?>.jpg" height="400" width="250" alt ="Poster of <?php echo $row["Title"]; ?>"></li>
+            <li><a href="<?php echo $row["Trailer"]; ?>">Trailer</a></li>
+            <li><p><?php echo $row["Decription"]; ?></p></li>
+            <?php
             }
+            ?>
+            </ul>
+        <?php
         } else {
             echo "0 results";
         }
