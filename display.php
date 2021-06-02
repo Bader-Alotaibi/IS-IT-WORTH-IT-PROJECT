@@ -12,7 +12,7 @@ Andre Thomas 53453
     </head>
     <body>
         <nav>
-            <div class='logo'>Is It Worth It</div>
+            <div class='logo'>Is It Worth It?</div>
             <ul class='links'>
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="Login.html">Login</a></li>

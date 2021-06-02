@@ -16,7 +16,7 @@ nav{
     position: relative;
     background-color: #87091A;
     text-align: center;
-    padding: 15px 30px;
+    padding: 15px 20px;
     
     
 }
@@ -49,6 +49,9 @@ nav .links li:hover a{
     background: rgb(226, 226,226);
     color: #87091A;
 }
+.center{
+    text-align: center;
+}
 
 #frm{  
     border: solid gray 1px;  
@@ -60,12 +63,12 @@ nav .links li:hover a{
 }  
 #btn{  
     color: #fff;  
-    background: #337ab7;  
+    background: #87091A;  
     padding: 7px;  
     margin-left: 70%;  
 }
 .display{
-    margin-left: 4px;
+    text-align: center;
 }
 #content{
     border-bottom-style: solid;
