@@ -1,4 +1,7 @@
 <?php
+#Bader Alotaibi 53306
+#Fatemah Abbas 50174
+#Andre Thomas 53453
      
     $host = "localhost";  
     $user = "root";  

@@ -1,3 +1,8 @@
+/*
+Bader Alotaibi 53306
+Fatemah Abbas 50174
+Andre Thomas 53453
+*/
 *{
     margin: 0px;
     padding: 0px;
@@ -58,6 +63,13 @@ nav .links li:hover a{
     background: #337ab7;  
     padding: 7px;  
     margin-left: 70%;  
+}
+.display{
+    margin-left: 4px;
+}
+#content{
+    border-bottom-style: solid;
+    border-color: #87091A;
 }
 img{
     max-width: 100%;

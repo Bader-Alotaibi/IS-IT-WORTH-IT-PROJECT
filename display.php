@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Bader Alotaibi 53306
+Fatemah Abbas 50174
+Andre Thomas 53453
 -->
 <html>
     <head>
@@ -39,11 +39,13 @@ and open the template in the editor.
         if (mysqli_num_rows($result) > 0) {
             // output data of each row
             while ($row = mysqli_fetch_assoc($result)) {?>
+            <div id="content">
             <li><h2> <?php echo $row["Title"]; ?></h2></li>
             <li>Type: <?php echo $row["Type"]; ?>  Genre: <?php echo $row["Genre"]; ?></li>
             <li><img src="Posters/<?php echo $row["Title"]; ?>.jpg" height="400" width="250" alt ="Poster of <?php echo $row["Title"]; ?>"></li>
             <li><a href="<?php echo $row["Trailer"]; ?>">Trailer</a></li>
             <li><p><?php echo $row["Decription"]; ?></p></li>
+            </div>
             <?php
             }
             ?>
