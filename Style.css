@@ -67,13 +67,43 @@ nav .links li:hover a{
     padding: 7px;  
     margin-left: 70%;  
 }
-.display{
-    text-align: center;
+#btn2{
+    color: #87091A;
+    width: 45px;
+    border: none;
+    height: 20px;
+    border-radius: 15px;
+    font-size: 1px;
+    background: #87091A;  
+    padding: 7px;  
+    margin-left: 70%; 
 }
-#content{
-    border-bottom-style: solid;
-    border-color: #87091A;
+#btn2:hover{
+    color: gold;
+    background: gold;
 }
+.display table{
+    align-content: center;
+}
+.comments{
+    
+}
+#add_comment_btn{
+    width: 65px;
+    border: none;
+    height: 20px;
+    background: #87091A;
+    color: #fff;
+    border-radius: 18px;
+}
+#add_comment_btn:hover{
+    background-color: gold;
+    color: #87091A;
+}
+#bold{
+    font-weight: bold;
+}
+
 img{
     max-width: 100%;
     height: auto;

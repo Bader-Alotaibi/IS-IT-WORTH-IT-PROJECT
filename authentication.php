@@ -21,7 +21,8 @@ Andre Thomas 53453
 
         </nav><br>
         <?php
-        include('connection.php');  
+        include('Functions.php');
+        $con = connect();
     $username = $_POST['user'];  
     $password = $_POST['pass'];  
       
