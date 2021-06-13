@@ -25,6 +25,7 @@ Andre Thomas 53453
         include('Functions.php');
         $con = connect();
         $password = mysqli_real_escape_string($con, $_POST['pass']);
+        $name = mysqli_real_escape_string($con, $_POST['user']);
         $sql = "INSERT INTO user (User_Name,Pass) VALUES('$name','$password')";
         if (mysqli_query($con, $sql)) {
             echo "New account created successfully";

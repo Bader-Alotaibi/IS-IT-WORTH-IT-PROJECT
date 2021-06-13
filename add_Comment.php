@@ -39,10 +39,11 @@ Andre Thomas 53453
                 <label> Comment: </label>  
                 <input type = "text" id ="comment" name  = "comment" />  
             </p><br>
-            <p>     
-                <input type =  "submit" id = "btn2" name = "title" value = "<?php echo $title; ?>" />
+                
+                Click to add comment:<input type =  "submit" id = "btn2" name = "title" value = "<?php echo $title; ?>" />
+                <br>
                 Don't have an account? <a href="Register.html">Register</a><br> 
-            </p>  
+              
         </form>
         </div>
         <script>  

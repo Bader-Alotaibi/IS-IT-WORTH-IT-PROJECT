@@ -20,7 +20,7 @@ function connect() {
     return $c;
 }
 
-function comments($media,$con) {
+function comments($media, $con) {
     $sql = "SELECT * FROM Comments WHERE Media_ID =(Select Media_ID FROM media WHERE Title = '$media')";
     $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0) {
@@ -32,6 +32,13 @@ function comments($media,$con) {
         echo "No Comments";
     }
 }
-function get_Media_ID(){
-    
+
+function get_Media_ID($title, $con) {
+    $sql = "Select Media_ID FROM media WHERE Title='$title'";
+    $result = mysqli_query($con, $sql);
+    if ($row = mysqli_fetch_assoc($result)) {
+        return $row['Media_ID'];
+    } else {
+        echo "EHH this shouldn't be happening.";
+    }
 }

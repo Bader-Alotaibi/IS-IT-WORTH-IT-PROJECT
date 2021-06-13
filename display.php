@@ -26,13 +26,17 @@ Andre Thomas 53453
             $con = connect();
             $search = mysqli_real_escape_string($con, $_GET['search']);
             $sql = '';
-            if ($search == '') {
+            #if the search was all then it will pull all
+            if ($search == 'All') { 
                 $sql = "SELECT * FROM media";
-            } elseif ($search == 'Movie'or $search == 'Video game') {
+            }#if the search was Movie or Video game it will search by type
+            elseif ($search == 'Movie'or $search == 'Video game') { 
                 $sql = "SELECT * FROM media WHERE Type='$search'";
-            } elseif ($search == 'Action'or $search == 'Horror' or $search == 'Comedy'or $search == 'FPS' or $search == 'RPG' or $search == 'Sports Games') {
+            }# if the search was by one of the genres then it will seach by genre
+            elseif ($search == 'Action'or $search == 'Horror' or $search == 'Comedy'or $search == 'FPS' or $search == 'RPG' or $search == 'Sports Games') {
                 $sql = "SELECT * FROM media WHERE Genre='$search'";
-            } else {
+            }
+            else { # if it was none of those options it will search by title 
                 $sql = "SELECT * FROM media WHERE Title='$search'";
             }
             $result = mysqli_query($con, $sql);
@@ -47,9 +51,9 @@ Andre Thomas 53453
                         <tr>
                             <td><img src="Posters/<?php echo $row["Title"]; ?>.jpg" height="400" width="250" alt ="Poster of <?php echo $row["Title"]; ?>"></td>
                             <td class="info"><ul>
-                                    <li><span id="bold">Type:</span> <?php echo $row["Type"]; ?>  <span id="bold">Genre:</span> <?php echo $row["Genre"]; ?></li>
-                        <li><a href="<?php echo $row["Trailer"]; ?>">Trailer</a></li>
-                        <li><p><?php echo $row["Decription"]; ?></p></li>
+                                    <li><span id="bold">Type:</span> <?php echo $row["Type"]; ?>  <span id="bold">Genre:</span> <?php echo $row["Genre"]; ?></li><br>
+                                    <li><a href="<?php echo $row["Trailer"]; ?>">Trailer</a></li><br>
+                        <li><p><span id="bold">Decription:</span> <?php echo $row["Decription"]; ?></p></li>
                                 </ul>
                             </td>
                         </tr>
